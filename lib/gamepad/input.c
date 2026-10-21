@@ -24,15 +24,15 @@
 typedef struct {
     // Little endian
     int16_t z;
-    int16_t x;
     int16_t y;
+    int16_t x;
 } InputPacketAccelerometer;
 
 typedef struct {
     // Little endian
     uint8_t roll[3];
-    uint8_t pitch[3];
     uint8_t yaw[3];
+    uint8_t pitch[3];
 } InputPacketGyroscope;
 
 typedef struct {
