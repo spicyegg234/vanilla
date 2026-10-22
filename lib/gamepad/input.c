@@ -126,7 +126,7 @@ static inline int32_t s24_le_to_int32(const uint8_t in[3])
 
 static inline void pack_gyroscope(InputPacketGyroscope *gyro, int32_t yaw, int32_t pitch, int32_t roll)
 {
-    int32_to_s24_le(gyro->yaw, yaw);
+    int32_to_s24_le(gyro->yaw, (-1 * yaw));
     int32_to_s24_le(gyro->pitch, pitch);
     int32_to_s24_le(gyro->roll, roll);
 }
