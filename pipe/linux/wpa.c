@@ -11,11 +11,9 @@
 #include <linux/version.h>
 #include <net/if.h>
 #include <linux/nl80211.h>
-#ifdef ANDROID
 #include <linux/sockios.h>
 #include <stdint.h>
 #include <sys/ioctl.h>
-#endif
 #include <netlink/genl/ctrl.h>
 #include <netlink/genl/genl.h>
 #include <netlink/route/addr.h>
@@ -57,7 +55,6 @@ static int running = 0;
 static int main_loop = 0;
 static int relay_running = 0;
 
-#ifdef ANDROID
 
 #define VANILLA_WLC_SET_PM 86
 #define VANILLA_WLC_IOCTL_MAGIC 0x14e46c77
@@ -116,7 +113,6 @@ static int vanilla_bcm_set_pm(const char *interface, int value)
     return 0;
 }
 
-#endif
 
 typedef struct {
     int from_socket;
