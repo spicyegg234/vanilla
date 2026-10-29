@@ -1,3 +1,25 @@
+# I assume you are here because of https://github.com/vanilla-wiiu/vanilla/issues/506
+
+## how 2 compile
+
+- dependencies
+  ```sh
+  apt install build-essential cmake libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev libavformat-dev libavcodec-dev libavutil-dev libswscale-dev libnl-genl-3-dev libnl-route-3-dev libxml2-dev libnm-dev libpolkit-agent-1-dev
+  ```
+
+- clone
+  ```sh
+  git clone -b swap-x-y-axes https://github.com/spicyegg234/vanilla.git
+  cd vanilla
+  ```
+
+- compile
+  ```sh
+  mkdir build && cd build
+  cmake ..
+  cmake --build . --parallel
+  ```
+
 # Vanilla
 
 This is a **work-in-progress** software clone of the Wii U gamepad. No warranty is provided and everything should be considered **alpha** at best.
